@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Prime Notes</title>
+</head>
+<body>
+    
+    <div class="container">
+
+        <h1>Prime Notes</h1>
+
+        <div class="top-bar">
+
+            <input type="text" id="search" placeholder="Search notes...">
+            <!-- Coming Soon -->
+             <!-- ! sir i add dark and light mode 🎉 (Good ye lo star -> *) -->
+            <button id="mode" >Change mode</button>
+        </div>
+
+        <div class="note-form">
+            <input type="text" id="title" placeholder="Title" placeholder="Title">
+            <input type="text" id="tags" placeholder="Tags" placeholder="Tags">
+            <textarea id="content" placeholder="Write note..."></textarea>
+            <button onclick="addNote()">Add Note</button>
+        </div>
+
+        <div id="notesContainer"></div>
+    
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
