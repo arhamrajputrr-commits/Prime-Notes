@@ -33,6 +33,13 @@ function addNote() {
         return;
     }
 
+    let alreadyExist = notes.some(n => n.title === title && n.content === content);
+
+    if (alreadyExist) {
+        alert("Note is already exist!");
+        return;
+    }
+
     notes.push({
         id: Date.now(),
         title,
@@ -46,7 +53,8 @@ function addNote() {
 }
 
 function deleteNote(id) {
-    notes = notes.filter(n => n.id !== id);
+    cnfrm = confirm("Are your sure you want to delete this note?");
+    cnfrm ? notes = notes.filter(n => n.id !== id) : null;
     saveToLocal();
     renderNotes();
 }
